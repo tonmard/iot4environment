@@ -1,15 +1,26 @@
 ---
 // @ts-ignore
-import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import Sealling from "../assets/1.png";
 ---
 
-<div class="mt-6 lg:mt-2">
-  <h2 class="text-center text-slate-500">Collaboration with</h2>
-  <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
+<div class="my-6 lg:mt-2">
+  <h2 class="text-center text-lg mb-12 text-slate-500">Kolaborasi bersama</h2>
+  <div class="flex   md:gap-10 items-center justify-center  flex-wrap">
 
-    <Icon class="size-8 md:size-12" name="simple-icons:react" />
-    <h2 class="text-center text-slate-500">X</h2>
-    <Icon class="size-8 md:size-12" name="simple-icons:svelte" />
+    <p class="text-3xl"
+          ><span class="font-bold text-slate-800">Iot4</span><span
+            class="text-slate-500">Environment</span
+          >
+    </p>
 
+    <Picture
+      src= {Sealling}
+      alt="Iot4Environment"
+      width={[200]}
+      size="620px"
+      loading="eager"
+      format="avif"
+    />
   </div>
 </div>

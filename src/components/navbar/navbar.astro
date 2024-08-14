@@ -5,10 +5,7 @@ import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
-  {
-    title: "About",
-    path: "/about",
-  },
+  
 ];
 ---
 
@@ -57,11 +54,11 @@ const menuitems = [
           }
         </ul>
         <div class="hidden lg:flex items-center gap-4 ml-2">
-        <Link href="/pricing" size="md">Our Project</Link>
+        <Link href="/about" size="md">Tentang Kami</Link>
       </div>
         <div class="lg:hidden flex items-center mt-3 gap-4">
     
-          <Link href="/pricing" size="md" block>Our Project</Link>
+          <Link href="/about" size="md" block>Tentang Kami</Link>
         </div>
       </MenuItems>
     </Astronav>
