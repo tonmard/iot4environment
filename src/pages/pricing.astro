@@ -1,0 +1,74 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import PricingCard from "@components/pricing.astro";
+
+const pricing = [
+  {
+    name: "Sealling",
+    price: "Sea Level Monitoring",
+    popular: true,
+    features: [
+      "All Free Features",
+   
+    ],
+    button: {
+      text: "Get Started",
+      link: "https://sealling.iot4environment.com/",
+    },
+  },
+  {
+    name: "Autecal",
+    price: "Automatic Temperature Sensor Calibration",
+    popular: true,
+    features: [
+      "All Free Features",
+    ],
+    button: {
+      text: "Get Started",
+      link: "http://autecalibration.iot4environment.com/",
+    },
+  },
+  {
+    name: "E-bike Monitoring",
+    price: "Electrical Bike Monitoring",
+    popular: true,
+    features: [
+      "All Free Features",
+     
+    ],
+    button: {
+      text: "Get Started",
+      link: "https://e-bikemonitoring.com/",
+    },
+  },
+  {
+    name: "Smart Fuel Nozzle",
+    price: "Bahan Bakar",
+    popular: true,
+    features: [
+      "All Free Features",
+    ],
+    button: {
+      text: "Get Started",
+      link: "#",
+    },
+  },
+];
+---
+
+<Layout title="Our Project">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Our Project</Fragment>
+      <Fragment slot="desc">
+        
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <PricingCard plan={item} />)}
+    </div>
+  </Container>
+</Layout>

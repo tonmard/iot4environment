@@ -1,0 +1,57 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="About">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">About Us </Fragment>
+      <Fragment slot="desc"></Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-2xl text-gray-800">
+        Transforming The Future: Revolutionizing Environmental Monitoring.
+      </h2>
+      <p class="text-lg leading-relaxed text-justify text-slate-500">
+        In an era where the health of our planet is more critical than ever, technological innovation stands at the forefront of environmental preservation. Introducing IoT4Environment, a groundbreaking initiative designed to harness the power of the Internet of Things (IoT) to monitor, protect, and sustain our natural world. Our mission is simple yet profound: to provide intelligent solutions for real-time environmental monitoring and ensure a safer, healthier future for all.
+      </p>
+    </div>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-3">
+      <h2 class="font-bold text-2xl text-gray-800">
+        Our Commitment to Sustainability.
+      </h2>
+      <p class="text-lg leading-relaxed text-justify text-slate-500">
+      IoT4Environment is not just about technology; it’s about making a tangible difference in the world. We are committed to sustainability at every level of our operations. Our devices are designed to be energy-efficient and environmentally friendly, utilizing renewable energy sources whenever possible. Moreover, we prioritize the use of recyclable materials in our hardware to minimize waste and reduce our carbon footprint.
+      </p>
+    </div>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-3">
+      <h2 class="font-bold text-2xl text-gray-800">
+        Collaboration for a Better Future.
+      </h2>
+      <p class="text-lg leading-relaxed text-justify text-slate-500">
+      We believe that the power of IoT can be fully realized only through collaboration. IoT4Environment invites governments, NGOs, research institutions, and businesses to join us in our mission to safeguard the environment. By partnering with us, you gain access to cutting-edge technology and expertise that can enhance your environmental initiatives. Together, we can develop custom solutions tailored to address specific environmental challenges, ensuring that our planet’s natural resources are preserved for future generations.
+      </p>
+    </div>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-3">
+      <h2 class="font-bold text-2xl text-gray-800">
+        Join the Revolution.
+      </h2>
+      <p class="text-lg leading-relaxed text-justify text-slate-500">
+      The time to act is now. Our planet’s future depends on the choices we make today. IoT4Environment offers a unique opportunity to leverage the latest technological advancements for the betterment of our world. By joining forces with us, you become a part of a revolutionary movement that is transforming environmental monitoring and protection.
+
+Together, we can create a sustainable future where technology and nature coexist in harmony. Let’s build a world where every breath of air, every drop of water, and every inch of soil is monitored and protected, ensuring a healthier planet for all. Discover the power of IoT4Environment – where innovation meets responsibility.
+      </p>
+    </div>
+    
+  </Container>
+</Layout>
